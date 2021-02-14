@@ -1,0 +1,16 @@
+formats:
+  - oas3
+extends:
+  - 'spectral:oas'
+rules:
+  info-matches-ingenia:
+    description: This is an example rule
+    message: Info must contain Ingenia
+    given: $.info
+    recommended: true
+    type: style
+    then:
+      field: title
+      function: pattern
+      functionOptions:
+        match: Ingenia

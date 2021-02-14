@@ -1,0 +1,7 @@
+title: Workout
+type: object
+x-tags:
+  - workouts
+properties:
+  id:
+    type: string

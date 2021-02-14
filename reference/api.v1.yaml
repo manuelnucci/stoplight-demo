@@ -1,7 +1,12 @@
 openapi: 3.0.0
 info:
-  title: API
+  title: Ingenia
   version: '1.0'
+  contact:
+    name: Ingenia
+    url: ingenia.la
+    email: support@ingenia.la
+  description: Ingenia API
 servers:
   - url: 'http://localhost:3001'
 paths:
@@ -15,7 +20,8 @@ paths:
         description: Id of an existing user.
     get:
       summary: Get User Info by User ID
-      tags: []
+      tags:
+        - users
       responses:
         '200':
           description: User Found
@@ -106,6 +112,8 @@ paths:
                   lastName: Baker
                   dateOfBirth: '1985-10-02'
         description: Patch user properties to update.
+      tags:
+        - users
   /user:
     post:
       summary: Create New User
@@ -160,6 +168,8 @@ paths:
                   dateOfBirth: '1996-08-24'
         description: Post the necessary fields for the API to create a new user.
       description: Create a new user.
+      tags:
+        - users
 components:
   schemas:
     User:
@@ -203,3 +213,5 @@ components:
         - lastName
         - email
         - emailVerified
+tags:
+  - name: users
