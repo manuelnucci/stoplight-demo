@@ -1,6 +1,6 @@
 # Introduction
 
-The beginning of an awesome article...
+The beginning of an awesome article....
 
 ---
 
